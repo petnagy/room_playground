@@ -1,9 +1,10 @@
-package com.playground.room
+package com.playground.room.pages.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.playground.room.R
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
