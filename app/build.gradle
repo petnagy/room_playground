@@ -19,12 +19,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 ext {
     supportLibVersion = '26.1.0'
     constraitLayoutVersion = '1.0.2'
     daggerVersion = '2.14.1'
+    timberVersion = '4.6.0'
 }
 
 dependencies {
@@ -34,9 +39,14 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$constraitLayoutVersion"
 
     implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
-    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    kapt 'com.android.databinding:compiler:3.0.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

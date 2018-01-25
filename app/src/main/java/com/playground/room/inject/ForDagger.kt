@@ -1,12 +1,13 @@
 package com.playground.room.inject
 
 import javax.inject.Qualifier
+import javax.inject.Scope
 
 /**
  * Created by petnagy on 2018. 01. 24..
  */
 
-@Qualifier
+@Scope
 @Retention(AnnotationRetention.RUNTIME)
 annotation class PerActivity
 
