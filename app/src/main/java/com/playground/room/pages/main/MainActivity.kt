@@ -6,10 +6,11 @@ import com.playground.room.BR
 import com.playground.room.R
 import com.playground.room.databinding.ActivityMainBinding
 import com.playground.room.pages.main.viewmodel.MainViewModel
+import com.playground.room.pages.oldsqlite.OldSqliteActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class MainActivity : DaggerAppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity(), MainActivityCallback {
 
     @Inject
     internal lateinit var viewModel: MainViewModel
@@ -21,5 +22,9 @@ class MainActivity : DaggerAppCompatActivity() {
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.setVariable(BR.viewModel, viewModel)
         binding.executePendingBindings()
+    }
+
+    override fun onOldSqlButtonClicked() {
+        OldSqliteActivity.launchActivity(this)
     }
 }

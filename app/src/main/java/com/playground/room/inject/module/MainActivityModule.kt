@@ -1,6 +1,7 @@
 package com.playground.room.inject.module
 
 import com.playground.room.inject.PerActivity
+import com.playground.room.pages.main.MainActivity
 import com.playground.room.pages.main.viewmodel.MainViewModel
 import dagger.Module
 import dagger.Provides
@@ -13,8 +14,8 @@ class MainActivityModule {
 
     @PerActivity
     @Provides
-    fun provideMainViewModel() : MainViewModel {
-        return MainViewModel()
+    fun provideMainViewModel(activity: MainActivity) : MainViewModel {
+        return MainViewModel(activity)
     }
 
 }
