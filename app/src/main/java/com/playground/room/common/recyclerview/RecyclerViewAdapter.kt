@@ -10,9 +10,9 @@ import com.playground.room.BR
 /**
  * Created by petnagy on 2018. 01. 28..
  */
-class RecyclerViewAdapeter: RecyclerView.Adapter<BindigViewHolder>() {
+class RecyclerViewAdapter : RecyclerView.Adapter<BindigViewHolder>() {
 
-    private var items: MutableList<ListItemViewModel> = ArrayList()
+    var items: MutableList<ListItemViewModel> = ArrayList()
         set(value) {
             oldItems = ArrayList(items)
             this.items.clear()
@@ -20,7 +20,9 @@ class RecyclerViewAdapeter: RecyclerView.Adapter<BindigViewHolder>() {
             //DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new ListItemViewModelDiffCallback(oldItems, items));
             //diffResult.dispatchUpdatesTo(this);
         }
-    private var itemLayout: Int = 0
+
+    var itemLayout: Int = 0
+
     private var oldItems: ArrayList<ListItemViewModel> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindigViewHolder {

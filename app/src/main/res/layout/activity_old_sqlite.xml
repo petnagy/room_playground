@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable name="viewModel" type="com.playground.room.pages.oldsqlite.viewmodel.OldSqliteViewModel"/>
@@ -62,7 +63,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_show_rebels" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_show_rebels"
+            bind:source="@{viewModel.chars}"
+            bind:itemLayout="@{@layout/char_card}"/>
 
     </android.support.constraint.ConstraintLayout>
 </layout>
