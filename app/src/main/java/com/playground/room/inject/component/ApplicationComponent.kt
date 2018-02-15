@@ -2,6 +2,7 @@ package com.playground.room.inject.component
 
 import android.content.Context
 import com.playground.room.App
+import com.playground.room.database.SqliteDatabaseHandler
 import com.playground.room.inject.ApplicationContext
 import com.playground.room.inject.module.ApplicationModule
 import com.playground.room.inject.module.ActivityModule
@@ -22,5 +23,7 @@ interface ApplicationComponent : AndroidInjector<App> {
 
     @ApplicationContext
     fun context(): Context
+
+    fun exposeSqliteHandler(): SqliteDatabaseHandler
 
 }

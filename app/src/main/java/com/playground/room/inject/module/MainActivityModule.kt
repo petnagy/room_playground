@@ -14,8 +14,6 @@ class MainActivityModule {
 
     @PerActivity
     @Provides
-    fun provideMainViewModel(activity: MainActivity) : MainViewModel {
-        return MainViewModel(activity)
-    }
+    fun provideMainViewModel(activity: MainActivity) : MainViewModel = MainViewModel(activity)
 
 }
