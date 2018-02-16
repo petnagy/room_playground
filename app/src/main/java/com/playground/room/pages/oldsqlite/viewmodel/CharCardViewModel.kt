@@ -15,4 +15,7 @@ class CharCardViewModel(private val char: StarWarsChar): ListItemViewModel() {
 
     @Bindable
     fun getCharName(): String = char.name
+
+    @Bindable
+    fun getRole(): String = char.role
 }
