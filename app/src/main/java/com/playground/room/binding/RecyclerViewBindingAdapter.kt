@@ -2,6 +2,7 @@ package com.playground.room.binding
 
 import android.databinding.BindingAdapter
 import android.support.annotation.LayoutRes
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.playground.room.common.recyclerview.ListItemViewModel
 import com.playground.room.common.recyclerview.RecyclerViewAdapter
@@ -20,8 +21,9 @@ fun setupRecyclerViewItemLayout(recyclerView: RecyclerView, @LayoutRes itemLayou
 }
 
 private fun getAdapter(recyclerView: RecyclerView): RecyclerViewAdapter {
-    var adapter: RecyclerViewAdapter? = recyclerView.adapter as RecyclerViewAdapter
+    var adapter: RecyclerViewAdapter? = recyclerView.adapter as? RecyclerViewAdapter
     if (adapter == null) {
+        recyclerView.layoutManager = GridLayoutManager(recyclerView.context, 1)
         adapter = RecyclerViewAdapter()
         recyclerView.adapter = adapter
     }

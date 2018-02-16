@@ -2,6 +2,7 @@ package com.playground.room.common.recyclerview
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
+import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,8 +18,8 @@ class RecyclerViewAdapter : RecyclerView.Adapter<BindigViewHolder>() {
             oldItems = ArrayList(items)
             this.items.clear()
             this.items.addAll(value)
-            //DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new ListItemViewModelDiffCallback(oldItems, items));
-            //diffResult.dispatchUpdatesTo(this);
+            var diffResult = DiffUtil.calculateDiff(ListItemViewModelDiffCallback(oldItems, items))
+            diffResult.dispatchUpdatesTo(this)
         }
 
     var itemLayout: Int = 0
