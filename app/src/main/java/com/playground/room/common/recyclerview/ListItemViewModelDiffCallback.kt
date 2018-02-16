@@ -16,11 +16,11 @@ class ListItemViewModelDiffCallback(private val oldItems: List<ListItemViewModel
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldItems[oldItemPosition] == newItems[newItemPosition]
+        return oldItems[oldItemPosition].areItemsTheSame(newItems[newItemPosition])
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldItems[oldItemPosition] == newItems[newItemPosition]
+        return oldItems[oldItemPosition].areContentsTheSame(newItems[newItemPosition])
     }
 
 }

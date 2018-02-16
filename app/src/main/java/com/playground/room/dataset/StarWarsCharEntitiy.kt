@@ -8,10 +8,10 @@ data class StarWarsChar(var id: Long = -1, var name: String = "", var race: Int 
 
 class SwChar {
     companion object {
-        val ID = "id"
-        val NAME = "name"
-        val RACE = "race"
-        val SIDE = "side"
-        val ROLE = "role"
+        const val ID = "id"
+        const val NAME = "name"
+        const val RACE = "race"
+        const val SIDE = "side"
+        const val ROLE = "role"
     }
 }

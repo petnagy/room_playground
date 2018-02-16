@@ -13,7 +13,7 @@ abstract class ListItemViewModel: BaseObservable() {
         return this == newItem
     }
 
-    fun applyDiff(listItemViewModel: ListItemViewModel): Boolean {
-        return false
+    fun areContentsTheSame(newItem: ListItemViewModel): Boolean {
+        return this == newItem
     }
 }

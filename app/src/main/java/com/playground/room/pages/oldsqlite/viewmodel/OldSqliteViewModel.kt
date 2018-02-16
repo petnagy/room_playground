@@ -18,10 +18,12 @@ class OldSqliteViewModel(private val model: OldSqliteModel) : BaseObservable() {
     }
 
     fun onEpireClicked(view: View) {
-
+        chars = model.getEmpireChars().map { it -> CharCardViewModel(it) }.toMutableList()
+        notifyChange()
     }
 
     fun onRebelesClicked(view: View) {
-
+        chars = model.getRebelChars().map { it -> CharCardViewModel(it) }.toMutableList()
+        notifyChange()
     }
 }

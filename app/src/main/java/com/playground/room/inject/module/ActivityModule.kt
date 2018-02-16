@@ -13,10 +13,10 @@ import dagger.android.ContributesAndroidInjector
 interface ActivityModule {
 
     @PerActivity
-    @ContributesAndroidInjector(modules = arrayOf(MainActivityModule::class))
+    @ContributesAndroidInjector(modules = [(MainActivityModule::class)])
     fun contributeMainActivity() : MainActivity
 
     @PerActivity
-    @ContributesAndroidInjector(modules = arrayOf(OldSqliteActivityModule::class))
+    @ContributesAndroidInjector(modules = [(OldSqliteActivityModule::class)])
     fun contributeOldSqliteActivity() : OldSqliteActivity
 }

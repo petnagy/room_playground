@@ -2,17 +2,24 @@ package com.playground.room.pages.oldsqlite.model
 
 import android.database.sqlite.SQLiteDatabase
 import com.playground.room.database.Database
+import com.playground.room.dataset.Side
 import com.playground.room.dataset.StarWarsChar
+import com.playground.room.dataset.SwChar
 
 /**
  * Created by petnagy on 2018. 01. 27..
  */
 class OldSqliteModel(val database: SQLiteDatabase) {
 
-    fun getAllChars(): List<StarWarsChar> {
+    fun getAllChars(): List<StarWarsChar> = getSqlQuery("SELECT * FROM " + Database.TABLE_SW_CHARS, null)
+
+    fun getRebelChars(): List<StarWarsChar> = getSqlQuery("SELECT * FROM " + Database.TABLE_SW_CHARS + " WHERE " + SwChar.SIDE + " =?", arrayOf(Side.REBEL.side.toString()))
+
+    fun getEmpireChars(): List<StarWarsChar> = getSqlQuery("SELECT * FROM " + Database.TABLE_SW_CHARS + " WHERE " + SwChar.SIDE + " =?", arrayOf(Side.EMPIRE.side.toString()))
+
+    private fun getSqlQuery(sqlQuery: String, args: Array<String>?): List<StarWarsChar> {
         val allChars: MutableList<StarWarsChar> = arrayListOf()
-        val selectQuery = "SELECT * FROM " + Database.TABLE_SW_CHARS
-        var cursor = database.rawQuery(selectQuery, null)
+        var cursor = database.rawQuery(sqlQuery, args)
         if (cursor.moveToFirst()) {
             do {
                 var char = StarWarsChar()
@@ -26,5 +33,4 @@ class OldSqliteModel(val database: SQLiteDatabase) {
         }
         return allChars
     }
-
 }

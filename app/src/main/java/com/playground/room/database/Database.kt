@@ -5,8 +5,8 @@ package com.playground.room.database
  */
 class Database {
     companion object {
-        val NAME = "star_wars_char_database"
-        val VERSION = 1
-        val TABLE_SW_CHARS = "star_wars_chars"
+        const val NAME = "star_wars_char_database"
+        const val VERSION = 1
+        const val TABLE_SW_CHARS = "star_wars_chars"
     }
 }
