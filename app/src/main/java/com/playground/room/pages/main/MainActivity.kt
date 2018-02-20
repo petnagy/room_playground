@@ -1,6 +1,5 @@
 package com.playground.room.pages.main
 
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import com.playground.room.BR
@@ -8,6 +7,7 @@ import com.playground.room.R
 import com.playground.room.databinding.ActivityMainBinding
 import com.playground.room.pages.main.viewmodel.MainViewModel
 import com.playground.room.pages.oldsqlite.OldSqliteActivity
+import com.playground.room.pages.roomimpl.WithRoomActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -26,7 +26,12 @@ class MainActivity : DaggerAppCompatActivity(), MainActivityCallback {
     }
 
     override fun onOldSqlButtonClicked() {
-        val launchIntent: Intent = OldSqliteActivity.launchActivity(this)
+        val launchIntent = OldSqliteActivity.launchActivity(this)
+        startActivity(launchIntent)
+    }
+
+    override fun onWithRoomButtonClicked() {
+        val launchIntent = WithRoomActivity.launchActivity(this)
         startActivity(launchIntent)
     }
 }

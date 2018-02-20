@@ -16,5 +16,6 @@ class MainViewModel(val callback: MainActivityCallback) {
 
     fun onRoomClicked(view : View) {
         Timber.d("Room button clicked")
+        callback.onWithRoomButtonClicked()
     }
 }

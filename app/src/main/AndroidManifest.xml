@@ -19,6 +19,8 @@
         </activity>
 
         <activity android:name=".pages.oldsqlite.OldSqliteActivity" />
+
+        <activity android:name=".pages.roomimpl.WithRoomActivity" />
     </application>
 
 </manifest>

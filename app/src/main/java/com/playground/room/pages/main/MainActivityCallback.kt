@@ -7,4 +7,6 @@ interface MainActivityCallback {
 
     fun onOldSqlButtonClicked()
 
+    fun onWithRoomButtonClicked()
+
 }
