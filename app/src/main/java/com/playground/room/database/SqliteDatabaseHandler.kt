@@ -8,12 +8,13 @@ import com.playground.room.dataset.Race
 import com.playground.room.dataset.Side
 import com.playground.room.dataset.StarWarsChar
 import com.playground.room.dataset.SwChar
+import com.playground.room.preference.PreferenceService
 import timber.log.Timber
 
 /**
  * Created by petnagy on 2018. 01. 26..
  */
-class SqliteDatabaseHandler(context: Context): SQLiteOpenHelper(context, Database.NAME, null, Database.VERSION) {
+class SqliteDatabaseHandler(context: Context, preferenceService: PreferenceService) : SQLiteOpenHelper(context, Database.NAME, null, preferenceService.getDatabaseVersion()) {
 
     override fun onCreate(sqLiteDatabase: SQLiteDatabase) {
         Timber.d("Database is created")
