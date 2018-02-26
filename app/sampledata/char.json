@@ -1,0 +1,60 @@
+ {
+    "data": [
+        {
+         "name": "Luke Skywalker",
+         "role": "Jedi"
+        },
+        {
+         "name": "Leia Organa",
+         "role": "general"
+        },
+        {
+         "name": "Han Solo",
+         "role": "smuggler"
+        },
+        {
+         "name": "Chewbacca",
+         "role": "co-pilo"
+        },
+        {
+         "name": "Lando Calrissian",
+         "role": "general"
+        },
+        {
+         "name": "R2 D2",
+         "role": "astro mechanic droid"
+        },
+        {
+         "name": "C3PO",
+         "role": "protocol droid"
+        },
+        {
+         "name": "Dart Vader",
+         "role": "sith lord"
+        },
+        {
+         "name": "Palpatin",
+         "role": "emperor"
+        },
+        {
+         "name": "Obi Wan Kenobi",
+         "role": "Jedi master"
+        },
+        {
+         "name": "Boba Fett",
+         "role": "head hunter"
+        },
+        {
+         "name": "Jabba",
+         "role": "gangster Boss"
+        },
+        {
+         "name": "Wilhuff Tarkin",
+         "role": "Grand Moff"
+        },
+        {
+         "name": "Conan Motti",
+         "role": "admiral"
+        }
+    ]
+ }

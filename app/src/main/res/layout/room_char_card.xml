@@ -27,26 +27,23 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@{viewModel.charName}"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="@tools:sample/full_names" />
+                tools:text="@sample/char.json/data/name" />
 
             <TextView
                 android:id="@+id/char_role"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@{viewModel.role}"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/char_name"
-                tools:text="@tools:sample/lorem" />
+                tools:text="@sample/char.json/data/role" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>

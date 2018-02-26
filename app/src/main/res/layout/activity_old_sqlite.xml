@@ -69,7 +69,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_show_rebels"
             bind:itemLayout="@{@layout/char_card}"
             bind:source="@{viewModel.chars}"
-            tools:listitem="@layout/room_char_card" />
+            tools:listitem="@layout/char_card" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
