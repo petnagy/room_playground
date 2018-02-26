@@ -29,7 +29,8 @@
                 android:text="@{viewModel.charName}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@sample/char.json/data/name" />
 
             <TextView
                 android:id="@+id/char_role"
@@ -41,7 +42,8 @@
                 android:text="@{viewModel.role}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/char_name" />
+                app:layout_constraintTop_toBottomOf="@+id/char_name"
+                tools:text="@sample/char.json/data/role" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
